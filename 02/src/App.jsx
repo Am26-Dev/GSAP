@@ -1,8 +1,16 @@
-import "./App.css"
+import "./App.css";
+import { Starter } from "./components/Starter";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react"; 
+
+gsap.registerPlugin(useGSAP);
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Starter />
+    </div>
   )
 }
 
