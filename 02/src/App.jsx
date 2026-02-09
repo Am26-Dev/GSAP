@@ -3,13 +3,15 @@ import { Starter } from "./components/Starter";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react"; 
-
-gsap.registerPlugin(useGSAP);
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { Ststarter } from "./components/Ststarter";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const App = () => {
   return (
     <div>
-      <Starter />
+      {/* <Starter /> */}
+      <Ststarter />
     </div>
   )
 }
