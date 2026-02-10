@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const Ststarter = () => {
     const main = useRef();
@@ -10,8 +9,7 @@ export const Ststarter = () => {
         const boxes = gsap.utils.toArray(".box")
         boxes.forEach((box)=>{
             gsap.to(box, {
-                x: 150,
-                scale: 1.5,
+                x: 200,
                 scrollTrigger: {
                     trigger: box,
                     start: "bottom bottom",
@@ -30,9 +28,9 @@ export const Ststarter = () => {
             <p>Scroll down to see the magic happen!!</p>
         </section>
         <div className="section flex-center column" ref={main}>
-            <div className="box gradient-blue">box</div>
-            <div className="box gradient-blue">box</div>
-            <div className="box gradient-blue">box</div>
+            <div className="box">box</div>
+            <div className="box">box</div>
+            <div className="box">box</div>
         </div>
         <section className="section"></section>
         </div>

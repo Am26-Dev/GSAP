@@ -1,0 +1,29 @@
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 18.5svh;
+  margin: 26.25vh 0;
+}
+
+.main1{
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: fit-content;
+}
+
+.pic{
+  position: relative;
+  /* height: 27.5vh; */
+  height: 50vh;
+  width: 100%;
+}
+
+img{
+  object-fit: cover;
+}

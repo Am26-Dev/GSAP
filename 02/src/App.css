@@ -3,17 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: #fffce1;
-  background-color: #0e100f;
   font-family: Mori, sans-serif;
   font-weight: 400;
-  margin: 0;
+  /* margin: 0; */
   font-size: 20px;
   line-height: 1.45;
+  background-color: bisque;
+  /* background:
+  radial-gradient(
+    circle at 90% 90%,
+    rgba(60, 8, 15, 0.5),
+    transparent 60%
+  ),
+  linear-gradient(180deg, #030712, #04162e, #0a2351); */
 }
 
- .boxes-container{
+.boxes-container{
   width: 100%;
   height: 100svh;
   display: flex;
