@@ -18,7 +18,7 @@ export const StTwo = () => {
             if (ref) {
             const rect = ref.getBoundingClientRect();
             const elementCenter = rect.top + rect.height / 2;
-            const distance = Math.abs(elementCenter - viewportCenter);
+            const distance = Math.abs(viewportCenter - elementCenter);
 
             if (distance < minDistance) {
                 minDistance = distance;
@@ -36,7 +36,8 @@ export const StTwo = () => {
     });
 
     useGSAP(() => {
-        gsap.utils.toArray(".main1").forEach((container) => {
+        const sp = gsap.utils.toArray(".main1")
+        sp.forEach((container) => {
         const scaleTl = gsap.timeline({
             scrollTrigger: {
             trigger: container,
@@ -49,13 +50,8 @@ export const StTwo = () => {
         scaleTl
             .from(
             container,
-            {
-                scale: 0.5,
-            },
-            {
-                scale: 2,
-                ease: "none",
-            },
+            {scale: 0.5, opacity: 0.5},
+            {scale: 2, ease: "none",},
             )
             .to(container, {
             scale: 0.5,
