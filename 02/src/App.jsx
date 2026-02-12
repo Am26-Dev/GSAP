@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Ststarter } from "./components/Ststarter";
 import { StTwo } from "./components/StTwo";
 import { useEffect, useRef } from "react";
+import { PersTransition } from "./components/perspective/PersTransition";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const App = () => {
@@ -30,7 +31,8 @@ const App = () => {
       <div>
         {/* <Starter /> */}
         {/* <Ststarter /> */}
-        <StTwo />
+        {/* <StTwo /> */}
+        <PersTransition />
       </div>
     </ReactLenis>
   )
