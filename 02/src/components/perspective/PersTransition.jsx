@@ -5,12 +5,12 @@ import { PersT } from "./PersT";
 export const PersTransition = () => {
     return (
         <main>
-            <section className="sec1">
-                <h1 className="he">Perspective Section Transition</h1>
+            <section className="flex h-screen justify-center items-center">
+                <h1 className="text-center text-4xl uppercase">Perspective Section Transition</h1>
             </section>
             <PersT />
-            <section className="sec2">
-                <h1 className="he">See you next one!</h1>
+            <section className="flex h-screen justify-center items-center">
+                <h1 className="text-center text-4xl uppercase">See you next one!</h1>
             </section>
         </main>
     )
