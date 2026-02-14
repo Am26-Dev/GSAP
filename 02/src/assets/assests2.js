@@ -12,41 +12,48 @@ export const assests2 = [
         image: sp1,
         description: "decription",
         number: "1",
+        bgColor: "bg-blue-600",
     },
     {
         title: "Iron Man",
         image: iron1,
         description: "decription",
         number: "2",
+        bgColor: "bg-red-600",
     },
     {
         title: "Thor",
         image: thor1,
         description: "decription",
         number: "3",
+        bgColor: "bg-blue-400",
     },
     {
         title: "Hawkeye",
         image: hawkeye1,
         description: "decription",
         number: "4",
+        bgColor: "bg-purple-600",
     },
     {
         title: "Captain America",
         image: cap1,
         description: "decription",
         number: "5",
+        bgColor: "bg-red-500",
     },
     {
         title: "Black-Widow",
         image: bw1,
         description: "decription",
         number: "6",
+        bgColor: "bg-black",
     },
     {
         title: "Hulk",
         image: hulk1,
         description: "decription",
         number: "7",
+        bgColor: "bg-green-500"
     },
 ]
