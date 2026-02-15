@@ -11,15 +11,21 @@ export const PersTransition = () => {
             {/* <PersT /> */}
 
             <section className="flex flex-col bg-pink-400 h-screen w-full">
-                <div className="bg-blue-400">
-                    <h3>PORTRAIT</h3>
+                <div className="bg-blue-400 px-10 py-6">
+                    <h3 className="text-6xl font-semibold">PORTRAIT</h3>
                 </div>
-                <div className="bg-blue-700 flex overflow-hidden ">
-                    <div className="bg-amber-700 self-end">descriptoin</div>
-                    <div className="bg-yellow-200 h-fit">
-                        <span>number(01)</span>
-                        <img className="h-[0%]
-                        %" src="./iron1.jpg" alt="" />
+                <div className="bg-blue-700 flex flex-1 justify-baseline items-end px-10 pb-16">
+                    <div className="bg-amber-700  max-w-sm">descriptoin</div>
+
+                    <div className="bg-yellow-200 relative flex flex-col items-start">
+                        <span className="absolute -top-10 text-3xl font-semibold">number(01)</span>
+                         <div className="w-[320px] aspect-[3/4] overflow-hidden">
+                <img
+                    src="./iron1.jpg"
+                    alt=""
+                    className="w-full h-full object-cover"
+                />
+            </div>
                     </div>
                 </div>
             </section>
