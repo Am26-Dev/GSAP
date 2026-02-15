@@ -20,7 +20,7 @@ export const PersT = () => {
         trigger: item,
         start: "top top",
         endTrigger: lastSection,
-        end: "bottom top",
+        end: "top top",
         pin: true,
         pinSpacing: false,
       })
@@ -40,13 +40,9 @@ export const PersT = () => {
               visibility: progress > 0.99 ? "hidden" : "visible",
               rotate: isEven ? progress * -10 : progress * 10,
             })
-
           }
         })
       }
-
-
-
     })
 
   }, {scope: containerRef})
@@ -59,13 +55,13 @@ export const PersT = () => {
                 <section 
                 data-section 
                 key={index} 
-                className={`flex h-screen flex-col gap-25 px-5 py-16 lg:px-10 lg:py-20 text-white ${item.bgColor}`}>
+                className={`rinku flex h-fit flex-col gap-25 px-5 w-full py-4 lg:px-10 lg:py-20 text-white ${item.bgColor}`}>
 
-                    <div className="flex justify-between">
+                    <div className="">
                       <h3 className="text-[15vw] leading-none font-bold lg:text-[7vw]">{item.title}</h3>
                     </div>
 
-                    <div className="flex h-full justify-between max-md:flex-col">
+                    <div className="flex h-full justify-between max-md:flex-col py-12">
 
                       <p className="w-full self-end text-2xl lg:w-1/3">{item.description}</p>
 
@@ -74,11 +70,11 @@ export const PersT = () => {
                         <span className="invisble text-[4vw] leading-none font-bold lg:visible">{item.number}</span>
 
                         <div className="relative h-full w-full overflow-hidden">
-
-                          <img src={item.image} alt="" className="scale-140 object-cover h-fit w-full"/>
-
+                          <img src={item.image} alt="" className="object-cover h-fit w-full"/>
                         </div>
+
                       </div>
+
                     </div>
 
                 </section>
