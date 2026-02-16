@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+*{
+    overflow: hidden;
+}
+
+body{
+    background-color: black;
+    color: antiquewhite;
+}
+
+.div1{
+    padding-bottom: 20px;
+}

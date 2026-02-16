@@ -9,15 +9,29 @@ export const PersT = () => {
   const containerRef = useRef(null)
 
   useGSAP(()=>{
-    const stickySection  = gsap.utils.toArray("[data-section]")
-    const lastSection = stickySection[stickySection.length - 1];
+    const stickySections = gsap.utils.toArray("[data-section]")
+    const lastSection = stickySections[stickySections.length - 1];
 
-    stickySection.forEach((item, index) => {
-      const nextSection = stickySection[index + 1]
-      const image = item.querySelector('img')
+    stickySections.forEach((section, index) => {
+      const nextSection = stickySections[index + 1]
+      const image = section.querySelector('img')
 
       ScrollTrigger.create({
-        trigger: item,
+        trigger: section,
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        onUpdate: (self) => {
+          if(image) {
+            gsap.set(image, {
+              scale: 1.4 - self.progress * 0.4,
+            })
+          }
+        }
+      })
+
+      ScrollTrigger.create({
+        trigger: section,
         start: "top top",
         endTrigger: lastSection,
         end: "top top",
@@ -34,8 +48,8 @@ export const PersT = () => {
             const progress = self.progress;
             const isEven = index % 2 === 0;
 
-            gsap.set(item, {
-              scale: 1- progress + 0.4,
+            gsap.set(section, {
+              scale: 1 - progress * 0.4,
               borderRadius: progress * 80,
               visibility: progress > 0.99 ? "hidden" : "visible",
               rotate: isEven ? progress * -10 : progress * 10,
@@ -55,13 +69,13 @@ export const PersT = () => {
                 <section 
                 data-section 
                 key={index} 
-                className={`rinku flex h-fit flex-col gap-25 px-5 w-full py-4 lg:px-10 lg:py-20 text-white ${item.bgColor}`}>
+                className={`sec1 flex h-screen flex-col text-white ${item.bgColor}`}>
 
-                    <div className="">
-                      <h3 className="text-[15vw] leading-none font-bold lg:text-[7vw]">{item.title}</h3>
+                    <div className="div1">
+                      <h3 className="text-4xl  font-bold leading-none lg:text-8xl">{item.title}</h3>
                     </div>
 
-                    <div className="flex h-full justify-between max-md:flex-col py-12">
+                    <div className="flex h-full justify-between max-md:flex-col">
 
                       <p className="w-full self-end text-2xl lg:w-1/3">{item.description}</p>
 
@@ -69,8 +83,8 @@ export const PersT = () => {
 
                         <span className="invisble text-[4vw] leading-none font-bold lg:visible">{item.number}</span>
 
-                        <div className="relative h-full w-full overflow-hidden">
-                          <img src={item.image} alt="" className="object-cover h-fit w-full"/>
+                        <div className="relative w-full h-full">
+                          <img src={item.image} alt="" className="absolute inset-0 w-full h-full object-cover"/>
                         </div>
 
                       </div>

@@ -1,7 +1,10 @@
-.rinku{
-    padding: 50px 100px;
+.sec1 {
+    padding: 2.5rem 1.25rem;
 }
 
-.middle{
-    margin-top: 3rem;
+
+@media (min-width: 1024px) {
+    .sec1 {
+        padding: 5rem 2.5rem;
+    }
 }
