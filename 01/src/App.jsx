@@ -46,7 +46,6 @@ const App = () => {
       {/* <TimeLineAnimNav /> */}
 
       <TextAnimation />
-
       <TextScroll />
     </>
   );
