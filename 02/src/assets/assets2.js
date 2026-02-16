@@ -6,7 +6,7 @@ import cap1 from "./cap1.jpg";
 import bw1 from "./bw1.jpg";
 import hulk1 from "./hulk1.jpg";
 
-export const assests2 = [
+export const assets2 = [
     {
         title: "Spiderman",
         image: sp1,

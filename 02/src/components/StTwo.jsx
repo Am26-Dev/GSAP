@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { assests } from "../assets/assests";
+import { assets } from "../assets/assets";
 import "./StTwo.css";
 import { useEffect, useRef, useState } from "react";
 
@@ -62,7 +62,7 @@ export const StTwo = () => {
 
     return (
         <div className="main">
-        {assests.map((item, index) => (
+        {assets.map((item, index) => (
             <div
             ref={(el) => {
                 containerRef.current[index] = el;
@@ -84,7 +84,7 @@ export const StTwo = () => {
         <div className="corner-section">
             <div className="corner-num">
             <span>{String(activeIndex + 1).padStart(2, "0")}</span>
-            <span>{assests[activeIndex].name}</span>
+            <span>{assets[activeIndex].name}</span>
             </div>
         </div>
         </div>

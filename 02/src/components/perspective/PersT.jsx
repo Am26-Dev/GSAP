@@ -1,4 +1,4 @@
-import { assests2 } from "../../assets/assests2";
+import { assets2 } from "../../assets/assets2";
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger} from "gsap/ScrollTrigger"
 import { useRef } from "react";
@@ -65,7 +65,7 @@ export const PersT = () => {
   return (
     <div className="flex flex-col gap-[25vh]" ref={containerRef}>
         {
-            assests2.map((item, index) => (
+            assets2.map((item, index) => (
                 <section 
                 data-section 
                 key={index} 

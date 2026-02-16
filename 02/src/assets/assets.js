@@ -6,7 +6,7 @@ import img5 from "./img5.jpg";
 import img6 from "./img6.jpg";
 import img7 from "./img7.jpg";
 
-export const assests = [
+export const assets = [
 
     {
         image: img1,
