@@ -83,7 +83,7 @@ export const PersT = () => {
 
                         <span className="invisble text-[4vw] leading-none font-bold lg:visible">{item.number}</span>
 
-                        <div className="relative w-full h-full">
+                        <div className="relative w-full h-screen">
                           <img src={item.image} alt="" className="absolute inset-0 w-full h-full object-cover"/>
                         </div>
 

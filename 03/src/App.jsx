@@ -1,8 +1,17 @@
-import React from 'react'
+import { gsap } from "gsap"
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin"
+import { useGSAP } from "@gsap/react"
+
+import { ScreambleText } from "./components/scrambletext/ScreambleText"
+
+gsap.registerPlugin(useGSAP, ScrambleTextPlugin)
+
 
 const App = () => {
   return (
-    <div className='bg-indigo-500'>App</div>
+    <div>
+      <ScreambleText />
+    </div>
   )
 }
 
