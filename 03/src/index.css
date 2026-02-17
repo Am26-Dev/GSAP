@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-.border {
-  outline: grey 2px dashed;
-  outline-offset: 5px;
-  border-radius: 10px;
-}
+    .border {
+    outline: grey 2px dashed;
+    outline-offset: 5px;
+    border-radius: 10px;
+    }

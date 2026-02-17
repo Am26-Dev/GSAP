@@ -6,7 +6,7 @@ export const ScreambleText = () => {
     const textRef = useRef(null);
     const [currIdx, setCurrIdx] = useState(0)
 
-    let blurbs = [
+    let texts = [
         "Scramble or unscramble text progressively.",
         "Use specific chars like 'XO' or use only numbers, UPPERCASE or lowercase.",
         "Even add a class to the new or old text."
@@ -14,12 +14,12 @@ export const ScreambleText = () => {
 
     const handleNext = () => {
 
-        const nextIdx = (currIdx + 1) % blurbs.length;
+        const nextIdx = (currIdx + 1) % texts.length;
         setCurrIdx(nextIdx);
 
         gsap.to(textRef.current, {
             scrambleText: {
-                text: blurbs[nextIdx],
+                text: texts[nextIdx],
                 chars: "upperAndLowerCase",
                 revealDelay: 0.1,
                 tweenLength: true,
